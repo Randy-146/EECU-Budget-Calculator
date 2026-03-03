@@ -6,25 +6,26 @@
         <title>Main Page</title>
         <link rel="stylesheet" href="Style.css">
     </head>
-        <header>
-
-        </header>
         <nav>
-            <a href="Main.html" class="logo">  <img src="th 1.png" alt="Logo" class="logo"></a>
+            <a href="index.html" class="logo">  <img src="th 1.png" alt="Logo" class="logo"></a>
             <h1> Wise Up! Budget Calculator</h1>
-            <a href="Main.html">Budget</a>
-            <a href="About.html">Expenses</a>
-            <a href="Contact.html" class="last">Results</a>
-        </nav>
+            <a href="index.html">Budget</a>
+            <a href="expenses.html">Expenses</a>
+            <a href="results.html" class="last">Results</a>
         </nav>
         <body>
             <h1 class="start">Start Budget</h1>
             <h2>Welcome to EECU’s Budget Calculator! Lets start with how much you make:</h2>
+            <div id="selectC">
             <label for="career">Select your career:</label>
-            <input type="text" id="income" name="income"><br><br>
+            <select id="careerSelect" class="dropDown">
+            </div>
+                <!-- use javascript to automatically fill in the options -->
+            </select><br><br>
             <label for="salary">Enter your monthly salary:</label>
 
             <h2>So you have ""</h2> 
+            <a href="expenses.html" class="green">Please enter a career!</a>
         </body>
     <footer>
     </footer>
