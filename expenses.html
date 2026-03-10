@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Budget Manager</title>
     <link rel="stylesheet" href="Style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <nav>
@@ -25,63 +26,63 @@
         <div class="titleBackground">
             <label>Water</label>
         </div>    
-        <input class="budget" type="Number">
+        <input class="budget necessities" id="Water" type="Number">
     </div>
 
     <div class="section">
         <div class="titleBackground">
             <label>Electricity</label>
         </div>    
-        <input class="budget" type="Number">
+        <input class="budget necesities" id="Electricity" type="Number">
     </div>
 
     <div class="section">
         <div class="titleBackground">
             <label>Gas</label>
         </div>    
-        <input class="budget" type="Number">
+        <input class="budget necesities" type="Number" id="Gas">
     </div>
 
     <div class="section">
         <div class="titleBackground">
             <label>Groceries</label>
         </div>    
-        <input class="budget" type="Number">
+        <input class="budget necesities" type="Number" id="Groceries">
     </div>
 
     <div class="section">
         <div class="titleBackground">
             <label>Mortgage</label>
         </div>    
-        <input class="budget" type="Number">
+        <input class="budget necesities" type="Number" id="Mortgage">
     </div>
 
     <div class="section">
         <div class="titleBackground">
             <label>Phone</label>
         </div>    
-        <input class="budget" type="Number">
+        <input class="budget necesities" type="Number" id="Phone">
     </div>
 
     <div class="section">
         <div class="titleBackground">
             <label>Insurance</label>
         </div>    
-        <input class="budget" type="Number">
+        <input class="budget necesities" type="Number" id="Insurance">
     </div>
 
     <div class="section">
         <div class="titleBackground">
             <label>Health</label>
         </div>    
-        <input class="budget" type="Number">
+        <input class="budget necesities" type="Number" id="Health">
     </div>
 
     <div class="section">
         <div class="titleBackground">
             <label>Clothing</label>
         </div>    
-        <input class="budget" type="Number">
+        <input class="budget necesities" type="Number" id="Clothing">
     </div>
     </section>
     <span class="expenses-leftover">
@@ -93,39 +94,41 @@
             <div class="titleBackground">
                 <label>Eating Out</label>
             </div>    
-            <input class="budget" type="Number">
+            <input class="budget fun" type="Number" id="Dining">
         </div>
 
         <div class="section">
             <div class="titleBackground">
                 <label>Subscriptions</label>
             </div>    
-            <input class="budget" type="Number">
+            <input class="budget fun" type="Number" id="Subscriptions">
         </div>
 
         <div class="section">
             <div class="titleBackground">
                 <label>Hobbies</label>
             </div>    
-            <input class="budget" type="Number">
+            <input class="budget fun" type="Number" id="Hobbies">
         </div>
 
         <div class="section">
             <div class="titleBackground">
                 <label>Travel</label>
             </div>    
-            <input class="budget" type="Number">
+            <input class="budget fun" type="Number" id="Travel">
         </div>
 
         <div class="section">
             <div class="titleBackground">
                 <label>Gym</label>
             </div>    
-            <input class="budget" type="Number">
+            <input class="budget fun" type="Number" id="Gym">
         </div>
 <section class="leftover-budget">
     <h3>Leftover:<span id="net-income">N/A</span></h3>
-<!--pie chart here-->
+    <div>
+        <canvas id="myChart"></canvas>
+    </div>
 </section>
     </section>
 </span>

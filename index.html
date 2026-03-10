@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Main Page</title>
         <link rel="stylesheet" href="Style.css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     </head>
         <body>
             <header>
@@ -17,11 +18,13 @@
                 </nav>
             </header>
             <h1 class="start">Start Budget</h1>
-            <h2>Welcome to EECU’s Budget Calculator! Lets start with how much you make:</h2>
+            <h2>Welcome to EECU's Budget Calculator! Lets start with how much you make:</h2>
                 <section  class="careerCont">
                     <span id="selectC">
                         <label for="career" id="careerDrop">Select your career:</label>
                         <select id="careerSelect" class="dropDown" >
+                            <option value="" disabled selected hidden>Select Job Option <img src="#" alt="dropdown arrow"></option>
+                        </select>
                     </span>
                 </section>
             
@@ -35,7 +38,7 @@
             <!--For the result of budget, use javascript to get here maybe--> 
             <a href="expenses.html" class="green">Lets get to expenses!</a>
             </section>
-
+            <script src="Script.JS"></script>
         </body>
 </html>
 
