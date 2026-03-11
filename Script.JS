@@ -8,7 +8,7 @@ async function getSalary(career) //get career salary from API
         const data = await response.json(); //Parse the response as JSON
         return data.results[0].salary_min || 0; // Return minimum salary or 0 if not available
     } catch (error) { // Handle any errors that occur during the fetch operation
-        console.error("Error fetching salary:", error); // Log the error to the console for debugging purposes
+         console.error("Error fetching salary:", error); // Log the error to the console for debugging purposes
         return 0; // Return 0 in case of error
     }
 }
@@ -131,3 +131,23 @@ document.body.addEventListener("input", () => { //update on any input
 })
 
 save();
+
+//obtain yearly salary from dropdown and convert to monthly salary, then update chart based on that
+const careerSelect = document.getElementById("careerSelect");
+careerSelect.addEventListener("change", async () => {
+    const selectedCareer = careerSelect.value;
+    const salary = await getSalary(selectedCareer);
+    const monthlySalary = salary / 12; // Convert yearly salary to monthly
+    console.log(`Selected Career: ${selectedCareer}, Monthly Salary: ${monthlySalary}`);
+    calcSaveChart(); // Update the chart with the new salary
+});
+//display onto monthly salary on page
+const monthly = document.getElementById("SalaryM");
+careerSelect.addEventListener("change", async () => {
+    const selectedCareer = careerSelect.value;
+    const salary = await getSalary(selectedCareer);
+    const monthlySalary = salary / 12; // Convert yearly salary to monthly
+    monthly.innerHTML = `Monthly Salary: $${monthlySalary.toFixed(2)}`;
+});
+
+
