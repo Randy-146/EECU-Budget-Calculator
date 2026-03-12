@@ -33,19 +33,17 @@ async function getCareers() { //grabbing careers
         console.error("Error fetching careers data:", error);
         return [];
     }
-
 }
 
 function createoptions(careers) { //creating options for dropdown
     careers.forEach((career, index) => {
         const option = document.createElement("option");
         const dropdown = document.getElementById("careerSelect");
-
+        console.log(`Selected Career: ${career.Occupation}, Salary: ${career.Salary}`);
         option.innerHTML = `${career.Occupation}: ${career.Salary}`;
         option.setAttribute("id", `${index}`);
         option.addEventListener("click", () => { //possibly edit to find when user clicks dropdown and figure out which option
             careerTitle.innerHTML = `Future Career: ${career.Occupation}`;
-            console.log(`Selected Career: ${career.Occupation}, Salary: ${career.Salary}`);
         });
         dropdown.appendChild(option);
     });
@@ -141,6 +139,7 @@ careerSelect.addEventListener("change", async () => {
     console.log(`Selected Career: ${selectedCareer}, Monthly Salary: ${monthlySalary}`);
     calcSaveChart(); // Update the chart with the new salary
 });
+
 //display onto monthly salary on page
 const monthly = document.getElementById("SalaryM");
 careerSelect.addEventListener("change", async () => {
@@ -151,3 +150,24 @@ careerSelect.addEventListener("change", async () => {
 });
 
 
+
+//calculates tax for expenses page
+function calculateTax() {
+document.getElementById("intro");
+const income = 30000;
+const mediCare= 1 -(98.55/100);
+const socialSecurity= 1 - (93.8/100);
+const stateTax= 1 - (96/100);
+const taxDeduct= income-16100;
+
+if (taxDeduct < 12400 ) {
+let total= taxDeduct - (1-(10/100));
+}
+if else(taxDeduct < 50400 & taxDeduct > 12401) {
+    let total= taxDeduct - (1- (12/100));
+}
+
+else {
+    let total = taxDeduct - (1- (22/100));
+}
+};
