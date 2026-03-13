@@ -11,7 +11,7 @@
             <header>
                 <nav>
                     <a href="index.html" class="logo">  <img src="th 1.png" alt="Logo" class="logo"></a>
-                    <h2> Wise Up! Budget Calculator</h2>
+                    <h2 class="web-desc"> Wise Up! Budget Calculator</h2>
                     <a class="options" href="index.html">Budget</a>
                     <a class="options" href="expenses.html">Expenses</a>
                     <a class="options" href="results.html" class="last">Results</a>
@@ -21,19 +21,20 @@
             <h2>Welcome to EECU's Budget Calculator! Lets start with how much you make:</h2>
                 <section  class="careerCont">
                     <span id="selectC">
-                        <label for="career" id="careerDrop">Select your career:</label>
+                        <label for="career" id="careerDrop">Select Career:</label>
                         <select id="careerSelect" class="dropDown" >
                             <option value="" disabled-selected-hidden>Select Job Option <img src="#" alt="dropdown arrow"></option>
                         </select>
                     </span>
-                    <p id="Salary">Monthly Salary</p>
+                    <span class="salaryCalc">
+                    <p id="Salary">Monthly Salary:</p>
+                    <p id="SalaryM"></p>
+                    </section>
                 </section>
             
             
                 <!-- use javascript to automatically fill in the options -->
             </select><br><br>
-            
-            <p id="SalaryM"></p>
 
             <section id="nextBtn">
             <!--For the result of budget, use javascript to get here maybe--> 
