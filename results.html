@@ -17,19 +17,18 @@
     </nav>
 <section class="body-column">
     <h1>Final Results</h1>
-    <h2>After taxes and expenses, you have XX left</h2>
+    <h2 id="tip">Wise Up Tip!</h2>
     <section id="resultsPara">
-        <p>
+        <p id="tips">
             Following your budget, you are above XX% of total savings.
         </p>
         <!-- add future tips by checking for criteria via javascript later -->
     </section>
-    <div id="buttonManager">
-        <button id="pieBtn">Pie Chart</button>
-        <button id="barBtn">Bar Graph</button>
-    </div>
     <div>
         <canvas id="myChart"></canvas>
+    </div>
+    <div>
+        <canvas id="secondaryChart"></canvas>
     </div>
     <footer>
     <a href="index.html" id="restart" class="green">Thank you for the tip!</a>
