@@ -28,7 +28,7 @@ body{
 nav {
     display:flex;
     flex-direction: row;
-    background-color:#0056a6;
+    background-color:var(--blue);
     align-items:center;
     padding:0;
     justify-content: space-between;
@@ -134,7 +134,7 @@ justify-content: center;
     text-align: center;
 }
 
-#SalaryM {
+#SalaryA {
     padding: 20px;
     border-radius: 40px;
     font-size: 28px;
@@ -142,6 +142,7 @@ justify-content: center;
     width: 200px;
     text-align: center;
     margin-left: 5px;
+    height:30px;
 }
 
 label {
@@ -164,6 +165,9 @@ label {
     transition: background-color 0.2s ease-in-out 0.0s;
     border-radius: 40px;
     text-decoration: none;
+    justify-self: center;
+    margin-top: 20px;
+    padding: 10px;
 }
 
 .green:hover {
@@ -212,16 +216,37 @@ label {
     width: 400px;
 }
 
-#add, #remove, #pieBtn, #barBtn {
+.chart-btns {
+    display: flex;
+    justify-content: space-between;
+    width: 400px
+}
+
+#pieBtn, #barBtn {
     background-color: white;
     border-radius : 40px;
     color: var(--primary);
     padding: 20px;
     font-size: 28px;
     font-weight: 700;
+    width: 175px;
+    border: 0px;
+    margin-top: 10px;
+transition: 0.4s ease;
+}
+
+#pieBtn:hover, #barBtn:hover {
+background-color:#f9f9f9;
+cursor: pointer;
 }
 
 .body-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-align {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -284,7 +309,7 @@ width: 450px;
     text-align:center;
 }
 
-#SalaryM {
+#SalaryA {
 width: 150px;
 }
 
