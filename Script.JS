@@ -26,7 +26,7 @@ if(barBtn) {
         const savedPercentages = JSON.parse(localStorage.getItem("chartPercentages")) || [0, 0, 0];
         currentChart.data.datasets[0].data = savedPercentages;
         currentChart.data.datasets[0].label = "%";
-        currentChart.data.labels = ["Necessities", "Fun", "Savings"];
+        currentChart.data.labels = ["Necessities", "Extras", "Savings"];
         currentChart.options.scales = {
             y: { 
                 beginAtZero: true, 

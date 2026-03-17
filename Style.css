@@ -31,7 +31,7 @@ nav {
     background-color:var(--blue);
     align-items:center;
     padding:0;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: nowrap;
     overflow-x:auto;
     gap: 10px;
@@ -74,6 +74,7 @@ nav {
     transition: background-color 0.2s ease-in-out 0.0s;
     color: var(--primary);
     text-align: center;
+    margin-right: 100px;
 }
 
 .options:hover {
@@ -112,7 +113,7 @@ h2{
 }
 
 #selectC select {
-    width: 25vw;
+    width: 15vw;
     border: none;
     border-radius: 40px;
     height: 75px;
@@ -264,6 +265,7 @@ cursor: pointer;
 @media screen and (max-width: 990px) {
    .logo {
     width: 200px;
+    height: 100px
 }
 
 .web-desc {
@@ -271,9 +273,8 @@ cursor: pointer;
 }
 
 .options {
-    font-size: 35px;
-    padding: 20px;
-    margin-right:10px;
+    font-size: 30px;
+    padding: 15px;
 }
 
 .dropDown {
@@ -283,25 +284,26 @@ cursor: pointer;
 
 @media screen and (max-width: 600px) {
 .logo {
-    width: 100px;
+    width: 200px;
+    height: 100px;
 }
 
 .web-desc {
-    font-size: 15px;
+    font-size: 20px;
 }
 
 .options {
-    font-size: 20px;
+    font-size: 30px;
     padding: 15px;
-    margin-right:10px;
 }
 
 .dropDown {
     text-align: center;
+    width: 100%;
 }
 
 #selectC {
-width: 450px;
+width: 400px;
 }
 
 .salaryCalc {
