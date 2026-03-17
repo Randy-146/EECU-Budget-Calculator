@@ -367,8 +367,11 @@ function save() {
     const savedExpenses = JSON.parse(localStorage.getItem("savedExpenses")) || {};
 
     inputs.forEach(input => {
-        if (savedExpenses[input.id] !== undefined) {
-            input.value = savedExpenses[input.id];
+        const storedValue = savedExpenses[input.id];
+        if (storedValue !== undefined && storedValue !== 0 && storedValue !== "0") {
+            input.value = storedValue;
+        } else {
+            input.value = ""; // Clear the input if no valid saved value
         }
     });
 
