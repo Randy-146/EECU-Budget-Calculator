@@ -190,9 +190,9 @@ window.addEventListener("DOMContentLoaded", () => {
 
     if (introEl) {
         introEl.innerHTML =
-            `Your annual salary is $${annualSalary.toLocaleString()}.
-           Your taxable income is $${taxableIncome.toLocaleString()} after the $16,100 standard deduction,and
-            your total taxes inclue Medicare(1.45%), Social Security(6.2%), State(4%), and federal, which taxes $${totalTaxes.toFixed(2)}.
+            `Your annual salary is $${annualSalary.toLocaleString()}, so with that
+           your taxable income becomes $${taxableIncome.toLocaleString()} after the $16,100 standard deduction,and
+            your total taxes include Medicare(1.45%), Social Security(6.2%), State(4%), and federal, which taxes $${totalTaxes.toFixed(2)}.
             From this, the monthly take home pay is <b>$${monthlyBudget.toFixed(2)}</b>.`;
     }
 });
